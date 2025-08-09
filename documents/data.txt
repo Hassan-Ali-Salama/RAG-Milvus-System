@@ -1,0 +1,15 @@
+Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. It's widely used in web development, data science, and artificial intelligence.
+
+Java is a class-based, object-oriented programming language. It is designed to be highly portable, meaning code compiled on one platform can run on any platform that supports Java without needing recompilation.
+
+The capital of France is Paris. Paris is a major European city and a global center for art, fashion, gastronomy, and culture.
+
+The capital of Japan is Tokyo. Tokyo is the world's most populous metropolis and is known for its advanced technology and vibrant culture.
+
+The heart of a computer is the CPU, or Central Processing Unit. The CPU performs most of the processing and calculations, making it the "brain" of the computer.
+
+The process of converting a high-level programming language code into machine code is called compilation. Compilers are programs that perform this translation.
+
+SQL, or Structured Query Language, is a domain-specific language used for managing and manipulating relational databases. It is essential for database administrators and software developers.
+
+The internet originated from a U.S. government project called ARPANET in the late 1960s. It has evolved into a global network of interconnected computer networks.
