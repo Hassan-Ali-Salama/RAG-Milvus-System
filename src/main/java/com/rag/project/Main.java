@@ -85,7 +85,7 @@ public class Main {
             RAGService ragService = new RAGService(embeddingStore, embeddingModel, chatLanguageModel);
             
             // Example queries
-            String query = "What is the content of the document?";
+            String query = "What is the capital of France?";
             
             // Get the answer from the RAG service
             System.out.println("\n" + "=".repeat(50));
