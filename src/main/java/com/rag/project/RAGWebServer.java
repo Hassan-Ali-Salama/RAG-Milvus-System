@@ -33,14 +33,18 @@ public class RAGWebServer {
             initializeRAG();
             
             // Start web server
+
             server = HttpServer.create(new InetSocketAddress(8081), 0);
+
             server.createContext("/", new HomeHandler());
             server.createContext("/ask", new QueryHandler());
             server.createContext("/health", new HealthHandler());
             server.setExecutor(null);
             
             server.start();
+
             System.out.println("🌐 RAG Web Server started at http://localhost:8081");
+
             System.out.println("📋 Endpoints:");
             System.out.println("  - GET  / : Home page");
             System.out.println("  - POST /ask : Ask questions (JSON: {\"query\":\"your question\"})");
@@ -55,17 +59,21 @@ public class RAGWebServer {
     private void initializeRAG() {
         System.out.println("🚀 Initializing RAG system...");
         
+
         String ollamaHost = "http://localhost:11434";
         
         EmbeddingModel embeddingModel = OllamaEmbeddingModel.builder()
                 .baseUrl(ollamaHost)
                 .modelName("nomic-embed-text:latest")
+
                 .timeout(Duration.ofMinutes(3))
                 .build();
         
         ChatLanguageModel chatModel = OllamaChatModel.builder()
                 .baseUrl(ollamaHost)
+
                 .modelName("llama3.2:latest")
+
                 .timeout(Duration.ofMinutes(3))
                 .build();
         
@@ -87,6 +95,7 @@ public class RAGWebServer {
         @Override
         public void handle(HttpExchange exchange) throws IOException {
             String response = "<!DOCTYPE html>" +
+
 "<html lang=\"en\">" +
 "<head>" +
 "<meta charset=\"UTF-8\">" +
@@ -143,6 +152,7 @@ public class RAGWebServer {
 "</script>" +
 "</body>" +
 "</html>";
+
 
             
             exchange.getResponseHeaders().set("Content-Type", "text/html; charset=UTF-8");

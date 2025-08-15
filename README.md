@@ -66,7 +66,9 @@ sudo docker-compose up -d
 The RAG system must be populated with your knowledge base. Run the following command to load your data from `documents/data.txt` into Milvus. This is a one-time process.
 
 ```bash
-mvn compile exec:java -Dexec.mainClass="com.rag.project.DocumentLoader"
+
+mvn compile exec:java -Dexec.mainClass="com.rag.project.Main"
+
 ```
 
 ## 💬 Usage
